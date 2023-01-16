@@ -1,0 +1,27 @@
+// 1. Configuration and helpers
+@import '../../assets/styles/abstracts/abstracts.scss';
+
+// 1. Configuration and helpers
+@import '../../assets/styles/abstracts/abstracts.scss';
+
+.header {
+  padding: 48px 0 38px;
+  background-color: $gray-900;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  display: block;
+  width: 70px;
+  margin: -20px 0;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}

@@ -1,0 +1,36 @@
+// 1. Configuration and helpers
+@import '../../assets/styles/abstracts/abstracts.scss';
+
+.main-nav {
+  @extend %listreset;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 18px;
+  font-weight: 400;
+
+  li {
+    padding-left: 42px;
+
+    &.active {
+      a {
+        font-weight: 700;
+        color: $gray-100;
+      }
+    }
+  }
+
+  a {
+    color: rgba($gray-100, 0.5);
+
+    &.active {
+      font-weight: 700;
+      color: $gray-100;
+    }
+
+    &:hover {
+      color: $gray-100;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+// 1. Configuration and helpers
+@import '../../assets/styles/abstracts/abstracts.scss';
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the card of the site
+// -----------------------------------------------------------------------------
+
+.card {
+  $self: &;
+  // border-radius: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: $gray-800;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &.card-horizontal {
+    display: flex;
+    flex-direction: row-reverse;
+
+    #{$self}-holder {
+      width: 52.5%;
+      padding: 84px 60px 30px 74px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #{$self}-body {
+      padding: 0 0 26px;
+    }
+
+    #{$self}-footer {
+      padding: 0;
+    }
+
+    #{$self}-img {
+      width: 47.5%;
+      object-fit: cover;
+    }
+
+    #{$self}-title {
+      margin-bottom: 24px;
+    }
+
+    #{$self}-text {
+      padding-right: 0;
+    }
+  }
+
+  &-holder {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &-body {
+    // padding: 30px 33px;
+    padding: 20px 20px;
+    flex-grow: 1;
+  }
+
+  &-title {
+    font-size: 21px;
+    line-height: 1.5238;
+    margin-bottom: 15px;
+  }
+
+  &-text {
+    color: rgba($white, 0.7);
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding: 0 33px 30px;
+    padding: 0 20px 20px;
+    margin-top: auto;
+  }
+
+  &-info {
+    @extend %listreset;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 400;
+
+    li {
+      padding-left: 22px;
+      display: flex;
+      align-items: center;
+    }
+
+    svg {
+      margin-right: 10px;
+      display: block;
+      fill: $white;
+    }
+  }
+}

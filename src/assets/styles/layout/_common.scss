@@ -1,0 +1,95 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the common layout of the site
+// -----------------------------------------------------------------------------
+
+body {
+  background-color: $body-bg;
+  font-weight: $font-weight-light;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $gutter;
+}
+
+.card-wrapp {
+  padding: 40px 0 200px;
+
+  .card.card-horizontal {
+    margin-bottom: 76px;
+  }
+
+  .btn-holder {
+    text-align: center;
+
+    .btn {
+      min-width: 288px;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 50px;
+  padding-bottom: 50px;
+
+  .col {
+    // padding: 0 0 76px;
+  }
+}
+
+.no-results {
+  background-color: $gray-800;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: $white;
+  width: 100%;
+  grid-column: 1/5;
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.status-info {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+
+  .text {
+    margin: 0;
+  }
+}
+
+.status-icon {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+
+  &.green {
+    background-color: rgb(1, 179, 1);
+  }
+  &.red {
+    background-color: red;
+  }
+  &.gray {
+    background-color: gray;
+  }
+}

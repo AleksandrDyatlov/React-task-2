@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn {
+  @include transition(background-color);
+
+  display: inline-block;
+  vertical-align: top;
+  padding: 12px 15px;
+  border-radius: 50rem;
+  border: 0;
+  color: $white;
+  font-size: 16px;
+  line-height: 1.2;
+  background-color: $primary;
+  text-align: center;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+    color: $white;
+  }
+
+  &.btn-more {
+    font-size: 12px;
+    line-height: 1.6;
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 15px 6px 20px;
+
+    svg {
+      margin-left: 20px;
+      margin-top: 1px;
+      fill: $white;
+    }
+  }
+}

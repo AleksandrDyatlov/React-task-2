@@ -1,0 +1,58 @@
+// 1. Configuration and helpers
+@import '../../assets/styles/abstracts/abstracts.scss';
+
+.search-form {
+  width: 100%;
+  position: relative;
+
+  .search-icon {
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg {
+      @include transition(fill);
+
+      fill: $gray-100;
+      display: block;
+    }
+  }
+
+  input {
+    @include transition(border-color);
+
+    border: 1px solid $gray-600;
+    background-color: $gray-600;
+    color: $white;
+    font-size: 16px;
+    line-height: 1.25;
+    padding: 17px 20px 17px 47px;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $gray-100;
+
+      ~ .search-icon {
+        svg {
+          fill: $white;
+        }
+      }
+    }
+
+    &:hover {
+      border-color: $gray-100;
+    }
+
+    @include placeholder {
+      color: rgba($gray-100, 0.6);
+    }
+  }
+}

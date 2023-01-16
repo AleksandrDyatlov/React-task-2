@@ -1,0 +1,87 @@
+// 1. Configuration and helpers
+@import '../../assets/styles/abstracts/abstracts.scss';
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site
+// -----------------------------------------------------------------------------
+
+.footer {
+  background-color: $gray-700;
+  padding: 125px 0 100px;
+  font-size: 18px;
+  line-height: 1.5556;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-col-1 {
+    width: 34%;
+    padding-right: 20px;
+    padding-top: 7px;
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+
+  &-col-2 {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .col {
+      padding: 0 15px 0 0;
+
+      &:first-child {
+        width: 40%;
+      }
+
+      &:nth-child(2) {
+        width: 36%;
+      }
+
+      &:nth-child(3) {
+        width: 24%;
+      }
+    }
+  }
+
+  a {
+    &:hover {
+      color: rgba($gray-100, 0.5);
+    }
+  }
+
+  &-logo {
+    display: block;
+    width: 70px;
+    margin-bottom: 20px;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &-title {
+    margin-bottom: 22px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  &-nav {
+    @extend %listreset;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.copyright {
+  font-size: 16px;
+  display: block;
+}
